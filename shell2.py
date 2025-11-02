@@ -104,4 +104,9 @@ productos_raw = Producto.objects.raw("SELECT * FROM productos_producto WHERE pre
 from django.db import connection
 
 with connection.cursor() as cursor:
-    cursor.execute('FROM productos DELETE producto WHERE nombre = "platanos"')
+    cursor.execute('DELETE FROM productos_producto WHERE nombre="Platanos"')
+
+#9.2- En general se recomienda utilizar las herramientas del ORM de Django, sin embargo, hay excepciones para consultas demasiado complejas, utilización de procedimientos almacenados y ocaciones de base de datos muy grandes en que el rendimiento es claramente superior al uso del ORM.
+
+
+#10.- Lo mismo que 9.
